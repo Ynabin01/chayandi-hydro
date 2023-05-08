@@ -19,6 +19,10 @@ Auth::routes();
 Route::get('/', 'HomeController@index');
 Route::prefix('admin')->group(function(){
     
+    Route::get('/news-detail/{id}',[HomeController::class,'FullStoryRead'])->name('FullStoryRead');
+   
+
+    
     Route::get('/','Auth\AdminLoginController@index');
     Route::post('/login','Auth\AdminLoginController@login')->name('login.submit');
     Route::get('/change_profile','AdminController@change_profile')->name('admin.change_profile');
@@ -101,7 +105,7 @@ Route::get('gallery-view/{slug}',[HomeController::class,"GotoGallery"])->name('G
 
 Route::get('/joblist/{category_slug}',[HomeController::class,"getJobListWithCategory"])->name('JobList');
 Route::get('view-all',[HomeController::class,"viewAll"])->name('viewall');
-Route::get('read-more/{slug}',[HomeController::class,'ReadMore'])->name('readmore');
+
 
 Route::POST('jobapply/store/{slug}',[ContactController::class,'ContactStore'])->name('storeapply');
 Route::get('/jobdetail/{jobslug}',[HomeController::class,'singlePage'])->name('single_job');
@@ -109,8 +113,11 @@ Route::get('/jobapply/{jobslug}',[ContactController::class,'jobApply'])->name('j
 Route::get('/contact',[ContactController::class,'Contact'])->name('contact');
 Route::POST('contact/store',[ContactController::class,'ContactStore'])->name('contactstore');
 
+Route::get('read-more/{slug}',[HomeController::class,'ReadMore'])->name('ReadMore');
+
 Route::get('/{slug}',[HomeController::class,'category'])->name('category');
 Route::get('/{category}/{subcategory}',[HomeController::class,'subcategory'])->name('subcategory');
+
 
 //Route::get('/page/{slug}',[HomeController::class,'singlePage'])->name('singlepage');
 // Route::any('{alias}', [

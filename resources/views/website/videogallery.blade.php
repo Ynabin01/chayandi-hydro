@@ -2,22 +2,20 @@
 
 @section('content')
      <!-- Breadcrumb area Start -->
-     <section class="page-title-area bg-image ptb--80" data-bg-image="/website/images/page-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1 class="page-title">Gallery</h1>
-                    <ul class="breadcrumb">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/photo">{{$slug1->caption ?? $slug1 }}</a></li>
-                        @if(isset($slug2))
-                        <li class="current"><span>{{$slug2->caption ?? $slug2 }}</span></li>
-                        @endif
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+     <section id="breadcrumb" class="breadcrumb-section position-relative" data-background="/website/img/background/bcbg.jpg">
+		<div class="background_overlay"></div>
+		<div class="container">
+			<div class="breadcrumb-content headline">
+				<h2 class="breadcrumb-title">Video Gallery</h2>
+				<div class="breadcrumb_item ul-li">
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#">Home</a></li>
+						<li class="breadcrumb-item active">Gallery</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
     <!-- Breadcrumb area End -->
 
     <!-- Main Content Wrapper Start -->
@@ -28,7 +26,7 @@
                 <div class="container">
                     <div class="row">
                         @foreach ($photos as $photo)
-                        <div class="col-xl-4 col-lg-4 col-md-6 mb--30">
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb--30" style="margin-top: 31px; margin-bottom: 20px;">
                             <iframe width="100%" height="315" src="{{ $photo->link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         @endforeach               

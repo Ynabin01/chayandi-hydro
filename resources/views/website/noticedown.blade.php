@@ -26,7 +26,7 @@
         <div class="container">
 
             <div class="row">
-                <iframe src="website/img/project/sustainability-09-02011.pdf" width="100%" height="900px">
+                <iframe src="/uploads/main_attachment/{{$noticedown->main_attachment}}" width="100%" height="900px">
                 </iframe>
 
             </div> <!--  end .row  -->

@@ -65,14 +65,14 @@
                                 <th>Number</th>
                                 <th>Email</th>
                                 <th>Message</th>
-                                <th>Resumes</th>
+                                {{-- <th>Resumes</th>
                                 <th>job title</th>
                                 <th>company name</th>
                                 <th>country</th>
                                 <th>salary</th>
                                 <th>contract period</th>
-                                <th>job category</th>
-                                <th>Action</th>
+                                <th>job category</th> --}}
+                                <th>Action</th> 
                             </tr>
                             </thead>
                             <tbody>
@@ -81,17 +81,17 @@
                                     <tr>
                                         <td>{{$index+1}}</td>
                                         <td>{{$contact->id ?? ''}}</td>
-                                        <td>{{$contact->name ?? ''}}</td>                                     
+                                        <td>{{$contact->first_name ?? ''}}</td>                                     
                                         <td>{{$contact->number ?? ''}}</td>
                                         <td>{{$contact->email ?? ''}}</td>
                                         <td>{{$contact->message ?? ''}}</td>
-                                        <td><a href="{{$contact->file ?? '#'}}"><button type="button" class="btn btn-danger btn-sm">View</button></td>
+                                        {{-- <td><a href="{{$contact->file ?? '#'}}"><button type="button" class="btn btn-danger btn-sm">View</button></td>
                                         <td>{{$contact->job_id ?? ''}}</td>
                                         <td>{{$contact->contract_time ?? ''}}</td>
                                         <td>{{$contact->navigation->short_content ?? ''}}</td>
                                         <td>{{$contact->navigation->caption ?? ''}}</td>
                                         <td>{{$contact->navigation->caption ?? ''}}</td>
-                                        <td>{{$contact->navigation->caption ?? ''}}</td>
+                                        <td>{{$contact->navigation->caption ?? ''}}</td> --}}
                                        <td><a href="{{route('contactDelete',$contact->id)}}"><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
                                     </tr>
                                     @endforeach

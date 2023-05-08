@@ -7,85 +7,30 @@
         </div>
         <!-- /title -->
         <div class="features-content">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="features-icon-text text-center position-relative">
-                        <div class="features-icon">
-                        <img src="website/img/logo/logo_chhyangdi (1).png" alt="">
-                        </div>
-                        <div class="features-text headline pera-content">
-                            <h3>Chhandi Khola Small Hydropower Project 2Mw (Operation)</h3>
-                            <p>Enhance The Energy Production</p>
-                        </div>
-                        <div class="features-hover-content">
-                            <div class="fh-icon-bg">
-                        <img src="website/img/logo/logo_chhyangdi (1).png" alt="">
-
-                            </div>
-                            <div class="features-hover-text headline pera-content">
-                                <h3>Chhandi Khola Small Hydropower Project 2Mw (Operation)</h3>
-                                <p>At dolore magna aliqua enim veniam
-                                    </p>
-                                <div class="fh-more">
-                                    <a href="project-detail.html"><i class="icon-arrow-down"></i></a>
+                <div class="row">
+                    @foreach ($projectlist as $abc)		
+                        <div class="col-md-4">
+                            <div class="features-icon-text text-center position-relative">
+                                <div class="features-icon">
+                                    <img src="{{ $abc->banner_image ?? ''}}" alt="">
+                                </div>
+                                <div class="features-text headline pera-content">
+                                    <h3>{{ $abc->caption ?? '' }}</h3>
+                                    <p> {!! htmlspecialchars_decode($abc->short_content ?? '') !!} </p>
+                                </div>
+                                <div class="features-hover-content">
+                                    <div class="features-hover-text headline pera-content">
+                                        <h3>{{ $abc->caption ?? '' }}</h3>
+                                        <p> {!! htmlspecialchars_decode($abc->long_content ?? '') !!} </p>
+                                        <div class="fh-more">
+                                            <a href="{{$abc->nav_name} ">Read More <img src="/website/img/arrow3.png" alt=""></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="features-icon-text text-center position-relative">
-                        <div class="features-icon">
-                            <img src="website/img/logo/logo_chhyangdi (1).png" alt="">
-
-                        </div>
-                        <div class="features-text headline pera-content">
-                            <h3>Chhandi Khola Small Hydropower Project 2Mw (Operation)</h3>
-                            <p>Enhance The Energy Production</p>
-                        </div>
-                        <div class="features-hover-content">
-                            <div class="fh-icon-bg">
-                        <img src="website/img/logo/logo_chhyangdi (1).png" alt="">
-
-                            </div>
-                            <div class="features-hover-text headline pera-content">
-                                <h3>Chhandi Khola Small Hydropower Project 2Mw (Operation)</h3>
-                                <p>At dolore magna aliqua enim veniam
-                                    .</p>
-                                <div class="fh-more">
-                                    <a href="project-detail.html"><i class="icon-arrow-down"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="features-icon-text text-center position-relative">
-                        <div class="features-icon">
-                        <img src="website/img/logo/logo_chhyangdi (1).png" alt="">
-
-                        </div>
-                        <div class="features-text headline pera-content">
-                            <h3>Chhandi Khola Small Hydropower Project 2Mw (Operation)</h3>
-                            <p>Enhance The Energy Production</p>
-                        </div>
-                        <div class="features-hover-content">
-                            <div class="fh-icon-bg">
-                        <img src="website/img/logo/logo_chhyangdi (1).png" alt="">
-
-                            </div>
-                            <div class="features-hover-text headline pera-content">
-                                <h3>Chhandi Khola Small Hydropower Project 2Mw (Operation)</h3>
-                                <p>At dolore magna aliqua enim veniam
-                                    .</p>
-                                <div class="fh-more">
-                                    <a href="project-detail.html"><i class="icon-arrow-down"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>

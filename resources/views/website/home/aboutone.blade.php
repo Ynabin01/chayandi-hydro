@@ -23,16 +23,16 @@
 							<div class="about-content pera-content">
 								<div class="about-text1">
 									<p>
-										{{ $about->short_content }}
+										{!! htmlspecialchars_decode($about->short_content ?? '') !!}
 									</p>
 								</div>
 								<div class="about-text2">
 									<p>
-										{{ $about->long_content }}
+										{!! htmlspecialchars_decode($about->long_content ?? '') !!}
 									</p>
 								</div>
 								<div class="about-btn text-uppercase">
-									<a  href="about.html">
+									<a  href="/gallery/video-gallery">
 										<i class="fas fa-play-circle"></i>
 										<span>how we generate energy </span>
 									</a>

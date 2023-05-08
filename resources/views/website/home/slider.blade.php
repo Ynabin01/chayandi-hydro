@@ -16,7 +16,7 @@
                     <p>{!! htmlspecialchars_decode($slider->long_content) !!} 
                     </p>
                     <div class="slide-btn-1">
-                        <a href="#">Learn More <i class="flaticon-next"></i></a>
+                        <a href="/aboutus/about-us">Learn More <i class="flaticon-next"></i></a>
                         <a href="#">Talk With Us 01-4426483</a>
                     </div>
                 </div>

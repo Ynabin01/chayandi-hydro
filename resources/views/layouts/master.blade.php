@@ -59,7 +59,7 @@
 
     <meta charset="UTF-8">
 	<title>Chhyangdi Hydropower Ltd.r</title>
-	<link rel="shortcut icon" href="{{ $seo->banner_image ?? '/uploads/icons/' . $global_setting->favicon }}" type="image/x-icon">
+	<link rel="shortcut icon" href="{{ $seo->favicon ?? '/uploads/icons/' . $global_setting->favicon }}" type="image/x-icon">
 	<meta name="author" content="Templines">
 	<meta name="description" content="Eltron - Alternative Energy HTML Template">
 	<meta name="keywords"
@@ -67,15 +67,15 @@
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="website/css/owl.carousel.css">
-	<link rel="stylesheet" href="website/css/fontawesome-all.css">
-	<link rel="stylesheet" href="website/css/simple-line-icons.css">
-	<link rel="stylesheet" href="website/css/animate.css">
-	<link rel="stylesheet" href="website/css/flaticon.css">
-	<link rel="stylesheet" href="website/css/bootstrap.min.css">
-	<link rel="stylesheet" href="website/css/video.min.css">
-	<link rel="stylesheet" href="website/css/lightbox.css">
-	<link rel="stylesheet" href="website/css/style.css">
+	<link rel="stylesheet" href="/website/css/owl.carousel.css">
+	<link rel="stylesheet" href="/website/css/fontawesome-all.css">
+	<link rel="stylesheet" href="/website/css/simple-line-icons.css">
+	<link rel="stylesheet" href="/website/css/animate.css">
+	<link rel="stylesheet" href="/website/css/flaticon.css">
+	<link rel="stylesheet" href="/website/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/website/css/video.min.css">
+	<link rel="stylesheet" href="/website/css/lightbox.css">
+	<link rel="stylesheet" href="/website/css/style.css">
 </head>
 
 <body>
@@ -134,7 +134,7 @@
 		<div class="site-main-menu clearfix">
 			<div class="container">
 				<div class="brand-logo float-left">
-					<a href="#"><img src="{{ $seo->banner_image ?? '/uploads/icons/' . $global_setting->site_logo }}" alt=""></a>
+					<a href="#"><img src="{{ $seo->site_logo  ?? '/uploads/icons/' . $global_setting->site_logo }}" alt=""></a>
 				</div>
 				<nav class="main_navigation desktop-menu ul-li">
                     <ul id="main-nav" class="navbar-nav text-uppercase clearfix">
@@ -162,8 +162,8 @@
                         @foreach ($menus as $menu)
                         <li @if ($menu->childs->count() > 0) class = "dropdown" @endif
                             class="@if ($menu->childs->count() > 0) dropdown @endif"><a
-                                href="@if($menu->nav_name=='Company') # @else /{{ $menu->nav_name }} @endif">{{ $menu->caption }}</a>
-                            @if ($menu->childs->count() > 0)
+                                href="@if($menu->nav_name=='aboutus' || $menu->nav_name=='notice' || $menu->nav_name=='notice' || $menu->nav_name=='gallery') # @elseif ($menu->nav_name=='news') /{{ $menu->nav_name }}?iam=news @else /{{ $menu->nav_name }} @endif">{{ $menu->caption }}</a>
+                            @if ($menu->childs->count() > 0 && $menu->id != '2415' && $menu->id != '2537')
                                 <ul class="dropdown-menu clearfix">
                                     @php $submenus = $menu->childs; @endphp
 
@@ -226,7 +226,7 @@
 		<!-- desktop-menu -->
 		<div class="el-mobile_menu relative-position">
 			<div class="el-mobile_menu_button s2-open_mobile_menu">
-				<i class="fas fa-bars"></i>
+				<i class="fas fa-bars"></i> 
 			</div>
 			<div class="el-mobile_menu_wrap">
 				<div class="mobile_menu_overlay s2-open_mobile_menu"></div>
@@ -387,7 +387,7 @@
 						<div class="col-lg-3 col-md-6">
 							<div class="footer-widget-item pera-content">
 								<div class="footer-logo-widget">
-									<a class="footer-logo" href="#"><img src="{{ $seo->banner_image ?? '/uploads/icons/' . $global_setting->site_logo }}"
+									<a class="footer-logo" href="/"><img src="{{ $seo->banner_image ?? '/uploads/icons/' . $global_setting->site_logo }}"
 											alt=""></a>
 									<p>{{ $seo->page_description ?? $global_setting->page_description }}</p>
 									<div class="footer-social">
@@ -405,9 +405,11 @@
 								<div class="footer-menu-widget ul-li-block">
 									<h3 class="el-widget-title">About Company</h3>
 									<ul>
-										<li><a href="#">Chairman Message</a></li>
-										<li><a href="#">Chairman md</a></li>
-										<li><a href="#">Team</a></li>
+										
+										<li><a href="/aboutus/about-us">About Us</a></li>
+										<li><a href="/aboutus/message">Message From CEO</a></li>
+										{{-- <li><a href="#">Chairman md</a></li> --}}
+										<li><a href="/aboutus/team">Team</a></li>
 
 									</ul>
 								</div>
@@ -418,9 +420,9 @@
 								<div class="footer-menu-widget ul-li-block">
 									<h3 class="el-widget-title">Quick link</h3>
 									<ul>
-										<li><a href="#">Contact</a></li>
-										<li><a href="#">Project</a></li>
-										<li><a href="#">Notice</a></li>
+										<li><a href="/contact">Contact</a></li>
+										<li><a href="/project">Project</a></li>
+										<li><a href="/news">News</a></li>
 
 									</ul>
 								</div>
@@ -432,10 +434,9 @@
 									<h3 class="el-widget-title">Our Locations</h3>
 
 									<div class="footer-map">
-										<div class="earth3dmap-com">	<iframe
-											src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7063.699821938295!2d85.32812!3d27.72192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb191141852d17%3A0xe43b257f0127e416!2sChhyangdi%20Hydropower%20Ltd.!5e0!3m2!1sen!2sus!4v1682880687509!5m2!1sen!2sus"
-											width="100%" height="170" style="border:0;" allowfullscreen="" loading="lazy"
-											referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+										<div class="earth3dmap-com">	
+											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.919309861214!2d85.3257905244078!3d27.719777524945005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1911fd1a25d7%3A0x36856671239b2d9d!2z4KSb4KSv4KS-4KSZ4KWN4KSm4KWAIOCkueCkvuCkh-CkoeCljeCksOCli-CkquCkvuCkteCksCDgpLLgpL8u!5e0!3m2!1sen!2snp!4v1683535330068!5m2!1sen!2snp" width="280" height="170" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -457,23 +458,23 @@
 	============================================= -->
 
 	<!-- For Js Library -->
-	<script src="website/js/jquery.min.js"></script>
-	<script src="website/js/bootstrap.min.js"></script>
-	<script src="website/js/popper.min.js"></script>
-	<script src="website/js/owl.carousel.min.js"></script>
-	<script src="website/js/jarallax.js"></script>
-	<script src="website/js/jquery.magnific-popup.min.js"></script>
-	<script src="website/js/appear.js"></script>
-	<script src="website/js/imagesloaded.pkgd.min.js"></script>
-	<script src="website/js/masonry.pkgd.min.js"></script>
-	<script src="website/js/isotope.pkgd.min.js"></script>
-	<script src="website/js/lightbox.js"></script>
-	<script src="website/js/waypoints.min.js"></script>
-	<script src="website/js/jquery.counterup.min.js"></script>
-	<script src="website/js/tilt.jquery.min.js"></script>
-	<script src="website/js/wow.min.js"></script>
-	<script src="website/js/script.js"></script>
-	<script src="website/js/gmap3.min.js"></script>
+	<script src="/website/js/jquery.min.js"></script>
+	<script src="/website/js/bootstrap.min.js"></script>
+	<script src="/website/js/popper.min.js"></script>
+	<script src="/website/js/owl.carousel.min.js"></script>
+	<script src="/website/js/jarallax.js"></script>
+	<script src="/website/js/jquery.magnific-popup.min.js"></script>
+	<script src="/website/js/appear.js"></script>
+	<script src="/website/js/imagesloaded.pkgd.min.js"></script>
+	<script src="/website/js/masonry.pkgd.min.js"></script>
+	<script src="/website/js/isotope.pkgd.min.js"></script>
+	<script src="/website/js/lightbox.js"></script>
+	<script src="/website/js/waypoints.min.js"></script>
+	<script src="/website/js/jquery.counterup.min.js"></script>
+	<script src="/website/js/tilt.jquery.min.js"></script>
+	<script src="/website/js/wow.min.js"></script>
+	<script src="/website/js/script.js"></script>
+	<script src="/website/js/gmap3.min.js"></script>
 	<script src="http://maps.google.com/maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script>
 
   <!-- gllery js -->

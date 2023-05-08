@@ -1,46 +1,56 @@
-@extends('layouts.master')
+@extends("layouts.master")
 
 @section('content')
-    <!-- Breadcrumb area Start -->
-    <section class="page-title-area bg-image ptb--80" data-bg-image="website/images/page-bg.jpg">
+@include('website.breadcrumb')
+<!-- Start of breadcrumb section
+    ============================================= -->
+	{{-- <section id="breadcrumb" class="breadcrumb-section position-relative" data-background="/website/img/background/bcbg.jpg">
+		<div class="background_overlay"></div>
+		<div class="container">
+			<div class="breadcrumb-content headline">
+				<h2 class="breadcrumb-title"> Message</h2>
+				<div class="breadcrumb_item ul-li">
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
+						<li class="breadcrumb-item active">Message</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section> --}}
+<!-- End of breadcrumb section
+	============================================= -->
+
+<!-- Start of about section
+	============================================= -->
+	<section class="section-padding bg-light-white">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1 class="page-title">Message from the Chairperson</h1>
-                    <ul class="breadcrumb">
-                        <li><a href="/">Home</a></li>
-                        <li class="current"><span>Message from the Chairperson</span></li>
-                    </ul>
+            <div class="section-title text-center position-relative pb-3  mx-auto">
+                <!-- <h5 class="fw-bold text-primary">Chairman Message</h5> -->
+
+            </div>
+            <div class="massagefromch">
+                <div class="row">
+                {{-- @foreach ($messagechairman as $msg )        --}}
+                    <div class="col-lg-12">
+                        <div class="post-details mb-md-80">
+                            <!-- post quote -->
+                            <blockquote class="bg-orange">
+                                {{-- <cite class="text-black">by Chairman</cite> --}}
+                                <h3 class="fw-600 text-blue">{{ $messagechairman->caption ?? '' }}</h3>
+                            </blockquote>
+                            <figure class="image-alignment left">
+                                <img src="{{ $messagechairman->banner_image ?? '' }}" class="image-fit" alt="">
+                            </figure>
+                            <p class="fw-500 mb-xl-10" style="margin-top: 20px;"> @php echo $messagechairman->short_content; @endphp</p>
+                            <p class="fw-500 mb-xl-10">
+                                @php echo $messagechairman->long_content; @endphp</p> 
+                        </div>
+                    </div>
+                {{-- @endforeach    --}}
                 </div>
             </div>
         </div>
     </section>
-    <!-- Breadcrumb area End -->
-
-    <!-- Main Content Wrapper Start -->
-    <main class="main-content-wrapper">
-        <!-- About Area Start -->
-
-        <section class="message-area ptb--60">
-            <div class="container">
-                <div class="heading mb--22">
-                    <h2>{{ $msg->caption }} @endphp</h2>
-                    <hr class="delimeter">
-                </div>
-                <div class="row">
-                    <div class="col-md-7">
-
-                        <h3>{{ $msg->short_content }}</h3>
-                        <p> {{ $msg->long_content }} </p>
-                    </div>
-                    <div class="col-md-5 col-sm-6">
-                        <img src="{{ $msg->banner_image }}">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Area End -->
-    </main>
-    <!-- Main Content Wrapper End -->
+<!-- End of about section
 @endsection
