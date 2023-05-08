@@ -22,15 +22,17 @@
                                     <div class="features-hover-text headline pera-content">
                                         <h3>{{ $abc->caption ?? '' }}</h3>
                                         <p> {!! htmlspecialchars_decode($abc->long_content ?? '') !!} </p>
-                                        <div class="fh-more">
-                                            <a href="{{$abc->nav_name} ">Read More <img src="/website/img/arrow3.png" alt=""></a>
-                                        </div>
+                                        {{-- <div class="fh-more">
+                                            <a href="/project"> Read More <img src="/website/img/arrow3.png" alt=""></a>
+                                        </div> --}}
                                     </div>
                                 </div>
+                              
                             </div>
                         </div>
-                    @endforeach
-                </div>
+                    @endforeach 
+                </div>             
         </div>
     </div>
 </section>
+ 
