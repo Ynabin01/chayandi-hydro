@@ -398,7 +398,7 @@ class HomeController extends Controller
                 
                 if($subcategory_type == "Team"){
                     //return "return to page gallary";
-                    $teams = Navigation::query()->where('parent_page_id',$subcategory_id)->orderBy('created_at', 'desc')->get();
+                    $teams = Navigation::query()->where('parent_page_id',$subcategory_id)->orderBy('position','ASC')->get();
                     // ->latest()->get();
                     
                     return view("website.team")->with(['teams'=>$teams,'jobs'=>$jobs,'menus'=>$menus,'sliders'=>$sliders,'about'=>$About,'global_setting'=>$global_setting,'slug_detail'=>$slug_detail,'slug1'=>$slug1,'slug2'=>$slug2]);
