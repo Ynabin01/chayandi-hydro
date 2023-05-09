@@ -9,7 +9,7 @@
         </div>
         <div class="testimonial-content">
             <div class="testimonial-part testimonial-img">
-                <img src="website/img/background/tbg.jpg" alt="">
+                <img src="website/img/about/IMG_20160824_110932.jpg" alt="">
             </div>
       
             <div class="testimonial-part testimonial-text-slide">
