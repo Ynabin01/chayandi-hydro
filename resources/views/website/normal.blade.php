@@ -1,21 +1,21 @@
 @extends('layouts.master')
 @section('content')
-@include('website.breadcrumb')
-{{-- <section id="breadcrumb" class="breadcrumb-section position-relative"
-data-background="website/img/background/bcbg.jpg">
+{{-- @include('website.breadcrumb') --}}
+<section id="breadcrumb" class="breadcrumb-section position-relative"
+data-background="/website/img/background/dark.jpg">
 <div class="background_overlay"></div>
 <div class="container">
     <div class="breadcrumb-content headline">
-        <h2 class="breadcrumb-title"> About Us</h2>
+        <h2 class="breadcrumb-title"> Chhyangdi Hydropower Limited</h2>
         <div class="breadcrumb_item ul-li">
             <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">About Us</li>
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active">Go to Home</li>
             </ul>
         </div>
     </div>
 </div>
-</section> --}}
+</section>
 <!-- End of breadcrumb section
 ============================================= -->
 <!-- Start of about section
