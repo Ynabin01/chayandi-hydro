@@ -134,7 +134,7 @@
 		<div class="site-main-menu clearfix">
 			<div class="container">
 				<div class="brand-logo float-left">
-					<a href="#"><img src="{{ $seo->site_logo  ?? '/uploads/icons/' . $global_setting->site_logo }}" alt=""></a>
+					<a href="/"><img src="{{ $seo->site_logo  ?? '/uploads/icons/' . $global_setting->site_logo }}" alt=""></a>
 				</div>
 				<nav class="main_navigation desktop-menu ul-li">
                     <ul id="main-nav" class="navbar-nav text-uppercase clearfix">

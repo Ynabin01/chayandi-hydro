@@ -4,14 +4,14 @@
 
 <!-- Start of breadcrumb section
 	============================================= -->
-	<section id="breadcrumb" class="breadcrumb-section position-relative" data-background="/website/img/background/bcbg.jpg">
+	<section id="breadcrumb" class="breadcrumb-section position-relative" data-background="/website/img/background/dark.jpg">
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="breadcrumb-content headline">
 				<h2 class="breadcrumb-title">Photo Gallery</h2>
 				<div class="breadcrumb_item ul-li">
 					<ul class="breadcrumb">
-						<li class="breadcrumb-item"><a href="#">Home</a></li>
+						<li class="breadcrumb-item"><a href="/">Home</a></li>
 						<li class="breadcrumb-item active">Gallery</li>
 					</ul>
 				</div>

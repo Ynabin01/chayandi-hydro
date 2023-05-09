@@ -15,7 +15,7 @@
     </div>
 </section> --}}
 <section id="breadcrumb" class="breadcrumb-section position-relative"
-data-background="/website/img/background/bcbg.jpg">
+data-background="/website/img/background/dark.jpg">
 <div class="background_overlay"></div>
 <div class="container">
     <div class="breadcrumb-content headline">
