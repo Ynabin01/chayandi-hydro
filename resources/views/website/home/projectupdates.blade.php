@@ -3,7 +3,7 @@
     <div class="container">
         <div class="section-title-middle text-center">
 
-            <h2>project Upadate</h2>
+            <h2>Project Update</h2>
         </div>
         <!-- /title -->
         <div class="features-content">

@@ -28,10 +28,11 @@ data-background="website/img/background/bcbg.jpg">
                 
                 <div class="single-post-inner-content">
                     <p>
-                        {{ $normal->short_content ?? ''}}  
+                        {!! htmlspecialchars_decode($normal->short_content ?? '') !!}  
                     </p>
                     <p>
-                        {{ $normal->long_content ?? ''}}   
+                        {!! htmlspecialchars_decode($normal->long_content ?? '') !!}
+                           
                     </p>
                     <!-- <div class="news-button"> <a href="notice-detail.html">Read more</a> </div> -->
                 </div>

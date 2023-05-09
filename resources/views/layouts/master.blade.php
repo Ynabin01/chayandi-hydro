@@ -387,7 +387,7 @@
 						<div class="col-lg-3 col-md-6">
 							<div class="footer-widget-item pera-content">
 								<div class="footer-logo-widget">
-									<a class="footer-logo" href="/"><img src="{{ $seo->banner_image ?? '/uploads/icons/' . $global_setting->site_logo }}"
+									<a class="footer-logo" href="/"><img src="{{ $seo->site_logo ?? '/uploads/icons/' . $global_setting->site_logo }}"
 											alt=""></a>
 									<p>{{ $seo->page_description ?? $global_setting->page_description }}</p>
 									<div class="footer-social">
