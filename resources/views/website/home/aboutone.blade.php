@@ -39,17 +39,17 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> 
 					<div class="col-lg-6 col-md-12">
 						<div class="about-img clearfix">
 							<div class="abt-img-set" data-tilt data-tilt-max="10">
 								<img src="{{ $about->banner_image ?? ''}}" alt="">
 							</div>
 							<div class="abt-img-set" data-tilt data-tilt-max="10">
-								<img src="website/img/about/ab2.jpg" alt="">
+								<img src="website/img/about/Untitled design (1).jpg" alt="">
 							</div>
 							<div class="abt-img-set" data-tilt data-tilt-max="10">
-								<img src="website/img/about/ab3.jpg" alt="">
+								<img src="website/img/about/Untitled design (2).jpg" alt="">
 							</div>
 						</div>
 					</div>
