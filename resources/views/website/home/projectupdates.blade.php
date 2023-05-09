@@ -1,7 +1,7 @@
 <section id="features" class="features-section position-relative" data-background="website/img/background/ft-bg.jpg">
     <div class="background_overlay"></div>
     <div class="container">
-        <div class="section-title-middle text-center">
+        <div class="section-title-middle text-center" style="margin-top: -58px; margin-bottom: -26px;">
 
             <h2>Project Update</h2>
         </div>
