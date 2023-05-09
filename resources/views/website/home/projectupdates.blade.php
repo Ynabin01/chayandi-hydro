@@ -1,13 +1,13 @@
-<section id="features" class="features-section position-relative" data-background="website/img/background/ft-bg.jpg">
+<section id="features" class="features-section position-relative" data-background="/website/img/background/aa1.webp">
     <div class="background_overlay"></div>
     <div class="container">
         <div class="section-title-middle text-center" style="margin-top: -58px; margin-bottom: -26px;">
 
-            <h2>Project Update</h2>
+            <h2>Project Updates</h2>
         </div>
         <!-- /title -->
         <div class="features-content">
-                <div class="row">
+                <div class="row" style="margin-bottom: -38px;">
                     @foreach ($projectlist as $abc)		
                         <div class="col-md-4">
                             <div class="features-icon-text text-center position-relative">
