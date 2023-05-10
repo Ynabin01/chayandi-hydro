@@ -410,6 +410,8 @@
 										<li><a href="/aboutus/message">Message From CEO</a></li>
 										{{-- <li><a href="#">Chairman md</a></li> --}}
 										<li><a href="/aboutus/team">Team</a></li>
+										<li><a href="/aboutus/mission-vision">Mission & Vission</a></li>
+										<li><a href="/aboutus/objective">Our Objectives</a></li>
 
 									</ul>
 								</div>
@@ -422,8 +424,10 @@
 									<ul>
 										<li><a href="/contact">Contact</a></li>
 										<li><a href="/project">Project</a></li>
-										<li><a href="/news">News</a></li>
-
+										<li><a href="/news?iam=news">News</a></li>
+										<li><a href="/notice/annual-report">Annual Report</a></li>
+										<li><a href="/gallery/photo-gallery">Photo Gallery</a></li>
+									 
 									</ul>
 								</div>
 							</div>
