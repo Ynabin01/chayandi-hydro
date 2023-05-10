@@ -10,9 +10,9 @@
                         <h2>News</h2>
                     </div>
                     <div class="blog-text-details">
-                        <p>Sagitis dia facilisis convalis eu dictum sed ipsum
-                            tempore dui. Excepteur sint occaecat aidata non
-                            proident quofficia deserunt mollit.</p> 
+                        <p>The main objective of the company is optimum use of water to generate hydropower 
+                            electricity which ultimately fulfills the demand of electricity of the country 
+                            optimum use of water resources to generate the hydro energy is the main objective.</p> 
                         <div class="b-read-more-btn text-center text-uppercase">
                             <a href="/news">read more <i class="flaticon-next"></i></a>
                         </div>
@@ -21,11 +21,14 @@
             </div>
             <div class="col-lg-8 col-md-12">
                 <div class="blog-post-content clearfix">
+                    @php
+                    $counter = 0;
+                    @endphp
                     @foreach ($newsevents as $newsevent)
                         <div class="blog-post-item">
                             <div class="blog-post-pic">
                                 <img src="{{ $newsevent->banner_image ?? '' }}" alt="">
-                                <a class="blog-linker" href="/{{$newsevent->nav_name}}"></a>
+                                <a class="blog-linker" href="{{route('FullStoryRead', ['id' => $newsevent->id])}}"></a>
                             </div>
                             <div class="blog-post-text">
                                 <h3><a href="#">{!! htmlspecialchars_decode($newsevent->long_content ?? '') !!}</a></h3>
@@ -38,9 +41,16 @@
                                 </div>
                             </div>
                         </div>
+                        @php
+                        $counter++;
+                        if ($counter === 2) {
+                            break;
+                        }
+                        @endphp
                     @endforeach 
                 </div>
             </div>
+            
         </div>
     </div>
 </section>

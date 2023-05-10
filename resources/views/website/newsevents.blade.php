@@ -45,7 +45,7 @@
                                 <div class="blog-post-item" style="width: 100%; margin-bottom: 27px;">
                                     <div class="blog-post-pic">
                                         <img src="{{ $newsevent->banner_image ?? '' }}" alt="">
-                                        <a class="blog-linker" href="/newsdetails"></a>
+                                        <a class="blog-linker" href="{{route('FullStoryRead', ['id' => $newsevent->id])}}"></a>
                                     </div>
                                     <div class="blog-post-text">
                                         <h3><a href=" ">{!! htmlspecialchars_decode($newsevent->long_content ?? '') !!}</a></h3>

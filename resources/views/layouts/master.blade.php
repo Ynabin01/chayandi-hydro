@@ -377,7 +377,7 @@
 						<div class="col-lg-3">
 							<div class="footer-icon-text-contact-info headline pera-content">
 								<p><i class="far fa-clock"></i> Monday to Friday</p>
-								<h3>9:00 am - 6:00 pm</h3>
+								<h3>9:30 AM - 5:30 PM</h3>
 							</div>
 						</div>
 					</div>
