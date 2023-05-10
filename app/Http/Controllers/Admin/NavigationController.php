@@ -117,7 +117,7 @@ class NavigationController extends Controller
             'nav_name' => 'required|min:3',
             'caption' => 'required',
             'icon_image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:10240',
-            'banner_image' => 'image|mimes:jpeg,png,jpg,gif,svgweb,p|max:10240'
+            'banner_image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:10240'
             
         ]);
         $request->offsetUnset('_token');
