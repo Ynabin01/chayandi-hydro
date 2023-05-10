@@ -143,12 +143,13 @@ class HomeController extends Controller
         $category = Navigation::all()->where('page_type','Group Project');
         if($category->count()>0){
             $category_id = $category->first()->id;
-            $projectlist = Navigation::all()->where('parent_page_id',2415 );
+            $projectlist = Navigation::query()->where('parent_page_id',2415 )->latest()->get();
         }
         $category = Navigation::all()->where('page_type','Group News');
         if($category->count()>0){
             $category_id = $category->first()->id;
-            $newsevents = Navigation::all()->where('parent_page_id',2537);
+            $newsevents = Navigation::query()->where('parent_page_id',2537)->latest()->get();
+            // return "d";
         }
         
         // return $job_categories;
@@ -289,17 +290,9 @@ class HomeController extends Controller
         }
         elseif ($category_type == "Group News") {
             $newsevents = Navigation::find($category_id);
+            // $newsevents = Navigation::where("id",$category_id)->latest()->get();
             $newsevents = $newsevents->childs;
-            return view("website.newsevents")->with([
-                'newsevents' => $newsevents,
-                'jobs' => $jobs,
-                'menus' => $menus,
-                'sliders' => $sliders,
-                'about' => $About,
-                'global_setting' => $global_setting,
-                'slug1' => $slug1,
-                 
-            ]);
+            return view("website.newsevents")->with(['newsevents' => $newsevents,'jobs' => $jobs,'menus' => $menus,'sliders' => $sliders,'about' => $About,'global_setting' => $global_setting,'slug1' => $slug1]);
         }
         elseif($category_type == "Group Project"){
         
