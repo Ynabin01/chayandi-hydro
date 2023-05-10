@@ -112,8 +112,8 @@
 						<div class="header_top_info float-right">
 							<div class="top_info_item top_info_menu ul-li clearfix">
 								<ul>
-									<li><a href="#">Careers</a></li>
-									<li><a href="#">Media</a></li>
+									<li><a href="/notice/career">Careers</a></li>
+									<li><a href="/news">Media</a></li>
 									<li><a href="#">FAQs</a></li>
 								</ul>
 							</div>
