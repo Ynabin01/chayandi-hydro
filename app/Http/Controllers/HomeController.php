@@ -291,7 +291,7 @@ class HomeController extends Controller
         elseif ($category_type == "Group News") {
             $newsevents = Navigation::find($category_id);
             // $newsevents = Navigation::where("id",$category_id)->latest()->get();
-            $newsevents = $newsevents->childslatest;
+            $newsevents = $newsevents->childs;
             return view("website.newsevents")->with(['newsevents' => $newsevents,'jobs' => $jobs,'menus' => $menus,'sliders' => $sliders,'about' => $About,'global_setting' => $global_setting,'slug1' => $slug1]);
         }
         elseif($category_type == "Group Project"){
