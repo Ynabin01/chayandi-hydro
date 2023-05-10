@@ -41,7 +41,7 @@
 									<p>
 										{!! htmlspecialchars_decode($detailspage->long_content ?? '') !!}
 									</p>
-									<div class="news-button"> <a href="/uploads/main_attachment/{{$detailspage->main_attachment ?? "" }}">Read more</a> </div>
+									<div class="news-button"> <a href="/uploads/main_attachment/{{$detailspage->main_attachment ?? "" }}">Views For More</a> </div>
 								</div>
 							</article> <!--  end single-post-container -->					 
 					</div> <!--  end .single-post-container -->
